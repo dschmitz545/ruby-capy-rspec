@@ -1,7 +1,7 @@
 describe 'Alternando entre novas janelas do navegador', :windows do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/windows"
+        visit "/windows"
     end
 
     it 'nova janela' do

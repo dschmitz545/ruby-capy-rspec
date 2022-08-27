@@ -3,7 +3,7 @@ describe 'Testando upload de arquivos' do
     before(:each) do
         @arquivo = Dir.pwd + "/spec/fixtures/arquivo.txt"
         @imagem = Dir.pwd + "/spec/fixtures/imagem.png"
-        visit "https://training-wheels-protocol.herokuapp.com/upload"
+        visit "/upload"
     end
 
     # usando o id

@@ -1,15 +1,15 @@
-describe 'Testando caixas de seleção' do
+describe 'Testando caixas de selecao' do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/checkboxes"
+        visit "/checkboxes"
     end
     
     # tanto pelo id ou name
-    it 'Marcando uma opção' do
+    it 'Marcando uma opcao' do
         check("thor")
     end
 
-    it 'Desmarcando uma opção' do
+    it 'Desmarcando uma opcao' do
         check("antman")
     end
 

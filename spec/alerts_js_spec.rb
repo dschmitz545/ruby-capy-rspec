@@ -1,7 +1,7 @@
 describe 'Alertas de JS', :alerts do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/javascript_alerts"
+        visit "/javascript_alerts"
     end
 
     it 'alerta' do
@@ -21,7 +21,7 @@ describe 'Alertas de JS', :alerts do
         expect(page).to have_content "Mensagem confirmada"
     end
 
-    it 'não confirma' do
+    it 'nao confirma' do
         click_button "Confirma"
 
         msg2 = page.driver.browser.switch_to.alert.text

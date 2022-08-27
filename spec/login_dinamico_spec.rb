@@ -1,10 +1,10 @@
-describe 'Testando formularios de login dinâmico', :login2 do
+describe 'Testando formularios de login dinamico', :login2 do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/login2"
+        visit "/login2"
     end
 
-    it 'Formulário de login2 com data de nascimento' do
+    it 'Formulario de login2 com data de nascimento' do
         
         find("#userId").set "stark"
         find("#passId").set "jarvis!"

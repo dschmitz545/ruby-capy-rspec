@@ -1,10 +1,10 @@
 describe 'Testando Login' do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/login"
+        visit "/login"
     end
 
-    it 'Formulário de login com sucesso' do
+    it 'Formulario de login com sucesso' do
 
         # tanto pelo id como pelo name
         fill_in 'userId', with: 'stark'
@@ -19,7 +19,7 @@ describe 'Testando Login' do
         expect(find('#flash')).to have_content "Olá, Tony Stark. Você acessou a área logada!"
     end
 
-    it 'Formulário de login com senha incorreta' do
+    it 'Formulario de login com senha incorreta' do
         
         fill_in 'userId', with: 'stark'
         fill_in 'password', with: 'jarvis'
@@ -33,7 +33,7 @@ describe 'Testando Login' do
 
     end
 
-    it 'Formulário de login com usuário não cadastrado' do
+    it 'Formulario de login com usuario não cadastrado' do
         
         # tanto pelo id como pelo name
         fill_in 'userId', with: 'stark1'

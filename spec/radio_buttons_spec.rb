@@ -1,14 +1,14 @@
-describe 'Testando caixas de seleção' do
+describe 'Testando caixas de selecao' do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/radios"
+        visit "/radios"
     end
 
-    it 'Seleção por ID' do
+    it 'Selecao por ID' do
         choose('cap')
     end
 
-    it 'Seleção por find e css selector' do
+    it 'Selecao por find e css selector' do
         find("input[value=guardians]").click
     end
 

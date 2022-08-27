@@ -1,7 +1,7 @@
-describe 'Testando controles dinâmicos' do
+describe 'Testando controles dinamicos' do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/dynamic_controls"
+        visit "/dynamic_controls"
     end
 
     it 'Quando habilita o campo', :dynamic do

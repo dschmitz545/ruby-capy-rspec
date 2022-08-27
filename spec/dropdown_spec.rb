@@ -1,8 +1,8 @@
 
-describe 'Testando caixa de opções', :dropdown do
+describe 'Testando caixa de opcoes', :dropdown do
 
     before(:each) do
-        visit "https://training-wheels-protocol.herokuapp.com/dropdown"
+        visit "/dropdown"
     end
 
     it 'Selecionando um item expecífico simples' do

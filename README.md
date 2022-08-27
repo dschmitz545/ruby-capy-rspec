@@ -105,9 +105,32 @@ rspec --format RspecJunitFormatter --out report.xml -fd
 ## Outras configurações interesantes do Capybara
 
 ```ruby
-# Final do arquivo
+config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.include Capybara::DSL
+
+  config.before(:example) do
+    page.current_window.resize_to(1920, 1080)
+  end
+
+# tirando screenshot
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+    #page.save_screenshot('log/' + nome + '.png')
+    page.save_screenshot('log/' + nome + '.png') if e.exception
+  end
+
+end
+
 Capybara.configure do |config|
-  # tempo default de time out, default 2
-  Capybara.default_max_wait_time = 5
+
+  config.app_host = "https://training-wheels-protocol.herokuapp.com"
+  config.default_max_wait_time = 7
+  # Para Chrome
+  # config.default_driver = :selenium_chrome_headless
+  
+  # para Firefox
+  config.default_driver = :selenium_headless
+
 end
 ```
